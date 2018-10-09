@@ -22,7 +22,7 @@
     
     <groupId>org.glassfish</groupId>
     <artifactId>javax.faces</artifactId>
-    <version>2.3.7.ww</version>
+    <version>2.3.7.0.1</version>
     
     <packaging>jar</packaging>
     
