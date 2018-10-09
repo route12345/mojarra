@@ -120,9 +120,10 @@ public final class CdiUtils {
         Converter<?> managedConverter = null;
 
         for (
-        	Class<?> forClassOrSuperclass = forClass; 
-        	managedConverter == null && forClassOrSuperclass != Object.class; 
-        	forClassOrSuperclass = forClassOrSuperclass.getSuperclass()
+            Class<?> forClassOrSuperclass = forClass;
+            managedConverter == null && forClassOrSuperclass != Object.class
+                && forClassOrSuperclass != null;
+            forClassOrSuperclass = forClassOrSuperclass.getSuperclass()
         ) {
         	managedConverter = createConverter(beanManager, new FacesConverterAnnotationLiteral("", forClassOrSuperclass));
         }
